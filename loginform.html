@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish Login Form</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        .container h1 {
+            margin-bottom: 20px;
+            color: #333;
+            font-size: 24px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+            font-weight: bold;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #6a11cb;
+            border-radius: 5px;
+            transition: border-color 0.3s;
+        }
+
+        .input-group input:focus {
+            border-color: #2575fc;
+            outline: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #6a11cb;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #2575fc;
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        <form class="login-form">
+            <div class="input-group">
+                <label for="username" >Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" onclick="LoginForm(event)">Login</button>
+        </form>
+        
+    </div>
+
+<script>
+       function LoginForm(event) {
+    // Prevent the form from submitting
+
+    let username = document.getElementById('username').value;
+    let password = document.getElementById('password').value;
+
+    // Predefined stored credentials
+    let preusername = "Jannat";
+    let prepassword = "abcd"; 
+
+    // Check the credentials
+    if (username === preusername && password === prepassword) {
+        document.write('Username & Password successfully Matched ');
+    } else if (username === preusername && password !== prepassword) {
+        document.write('Password  incorrect!');
+    } else if (username !== preusername && password === prepassword) {
+        document.write('Username  incorrect ');
+    } else {
+        document.write('Username & Password  incorrect ');
+    }
+}
+
+
+
+</script>
+
+</body>
+</html>
